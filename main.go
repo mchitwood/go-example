@@ -19,7 +19,7 @@ type Movie struct {
 func main() {
 	router := mux.NewRouter()
 	router.HandleFunc("/movies", handleMovies).Methods("GET")
-	http.ListenAndServe(":8080", router)
+	http.ListenAndServe(":80", router)
 }
 
 func handleMovies(res http.ResponseWriter, req *http.Request) {
