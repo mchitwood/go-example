@@ -28,6 +28,7 @@ func handleMovies(res http.ResponseWriter, req *http.Request) {
 	var movies = map[string]*Movie{
 		"tt0076759": &Movie{Title: "Chucky's Revenge: The Never-Ending Cloud Party", Rating: "8.7", Year: "1977"},
 		"tt0082971": &Movie{Title: "Eric The Red: The Search For a PasS", Rating: "8.6", Year: "1981"},
+		"tt0086452": &Movie{Title: "Where in the World is Peter Springsteen?", Rating: "10.0", Year: "2016"},
 	}
 
 	outgoingJSON, error := json.Marshal(movies)
