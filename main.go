@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"log"
 	"net/http"
+	"os"
 
 	"github.com/gorilla/mux"
 )
@@ -19,7 +20,7 @@ type Movie struct {
 func main() {
 	router := mux.NewRouter()
 	router.HandleFunc("/movies", handleMovies).Methods("GET")
-	http.ListenAndServe(":80", router)
+	http.ListenAndServe(":" + os.Getenv("PORT"), router)
 }
 
 func handleMovies(res http.ResponseWriter, req *http.Request) {
