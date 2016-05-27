@@ -9,10 +9,10 @@ import (
 
 func main() {
     http.HandleFunc("/", hello)
-    err := http.ListenAndServe(":"+os.Getenv("PORT"), nil)
-    if err != nil {
-        log.Fatal("ListenAndServe:", err)
-    }
+    #err := http.ListenAndServe(":"+os.Getenv("PORT"), nil)
+    #if err != nil {
+    #    log.Fatal("ListenAndServe:", err)
+    #}
 }
 
 func hello(w http.ResponseWriter, req *http.Request) {
